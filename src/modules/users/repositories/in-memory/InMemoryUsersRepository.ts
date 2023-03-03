@@ -6,7 +6,7 @@ import { IUsersRepository } from "../IUsersRepository";
 export class InMemoryUsersRepository implements IUsersRepository {
   private users: User[] = [];
 
-  async findByEmail(email: string): Promise<User | undefined> {
+  async findByEmail(email: string): Promise<User | undefined> {  
     return this.users.find(user => user.email === email);
   }
 
